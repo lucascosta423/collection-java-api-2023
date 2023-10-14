@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Carrinhodecompras {
-    private List<Item> itemList;
+    private final List<Item> itemList;
 
     public Carrinhodecompras() {
         this.itemList = new ArrayList<>();
@@ -25,7 +25,7 @@ public class Carrinhodecompras {
     }
 
     public Double calcularValorTotal(){
-        Double soma = 0.0;
+        double soma = 0.0;
         for (Item i: itemList) {
             soma += (i.getPreco() * i.getQuantidade());
         }
